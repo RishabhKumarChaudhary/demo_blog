@@ -1,0 +1,28 @@
+<% content_for :page_title, @post.title %>
+<div class="section">
+    <div class="container">
+        <nav class="level">
+                <div class="level-left">
+                <h2>Operations</h2>
+                </div>
+                <div class="level-right">
+                <div class="level-item">
+                <%= link_to 'edit', edit_post_path(@post), class: "button is-primary" %>
+                </div>
+                <div class="level-item">
+                <%= link_to 'delete', post_path(@post), method: :delete,data: {confirm: "Are you sure you want to delete the post"} ,class: "button is-danger" %>
+                </div>
+                </div>
+        </nav>
+        
+        <h1 class="title">
+            <%=@post.title %></h1>
+        
+
+        <div class="content">
+            <%= @post.content %>
+        </div>
+
+    </div>
+
+</div>
